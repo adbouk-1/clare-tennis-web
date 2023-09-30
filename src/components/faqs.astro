@@ -1,0 +1,50 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const features: Array<FeatureItem> = [
+  {
+    title: "What happens if a match is scheduled but its raining?",
+    description:
+      "In the event of wet weather, We’ll have to unfortunately rearrange, but we will try to avoid this if at all possible because it’s an organisation nightmare! If it’s safe to play, then play.",
+  },
+  {
+    title: "How do I get to another colleges' sports ground?",
+    description:
+      "We will send a map with annotations of where to go/where to meet the other teams.",
+  },
+  {
+    title: "What is the structure of a match day?",
+    description:
+      "There will be 4 players competing for the college every week. format is 4 singles matches against each college and 2 doubles matches.",
+  },
+  {
+    title: "How do the clare tennis courts work and where are they?",
+    description:
+      "They should operate on a first come first serve basis. The address is: Clare College Pavillion Bentley Road, Newtown, CB2 8AW, England, United Kingdom",
+  },
+  {
+    title: "Does clare have any spare kit?",
+    description:
+      "We have a set of rackets and balls that could be borrowed on request, just email or message the current tennis captain to obtain them.",
+  },
+  {
+    title: "What is the CULTC?",
+    description:
+      "The CULTC (Cambridge Uni Lawn Tennis Club) is the main university tennis society. They run social tennis sessions each week for all abilities at Fenners (University tennis courts and cricket ground by Parkers Piece). It’s great fun, and there are sessions where people get coaching from those in the university teams. It’s a really great opportunity for people to meet others interested in tennis, improve their tennis and do some exercise! Keep a look out for any posts on the CULTC facebook about social tennis",
+  },  
+];
+---
+
+<ContentSection title="FAQS" id="faqs">
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>

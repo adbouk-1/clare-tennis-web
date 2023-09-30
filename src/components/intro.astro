@@ -3,29 +3,48 @@ import { Icon } from "astro-icon";
 import ContentSection from "~/components/content-section.astro";
 ---
 
-<ContentSection title="Just ship less" id="intro">
-  <Icon slot="eyebrow" name="logomark" class="h-32" />
+<img 
+src="src/assets/clare-logo.png"
+loading="eager"
+alt="Clare Logo"
+width="200" 
+height="200"
+class="center"
+/>
+<ContentSection title="Introduction" id="intro">
   <Fragment slot="lead">
-    Astro is a new kind of site builder for the
-    <span class="text-primary">modern</span> web.
-    <span class="text-primary">Lightning-fast</span>
-     performance meets <span class="text-primary">powerful</span> developer
-    experience.
+    Clare College Tennis Club is a relaxed and welcoming environment for both beginners and more-experienced players to come and play tennis.
+    <br />
+    <br />
+    <img src="https://humankinetics.me/wp-content/uploads/2017/06/federer-australian-open-2016-quarters_2.jpg" 
+    width="400"
+    class="center"/>
+    <br />
+    <br />
+    Clare boasts 2 hard courts as well as 6 well-maintained grass courts (available for use in summer) located at the Clare sports ground. These are free to use by all members of the college. 
+    <br />
+    <br />
+    <img src="https://www.middlesexasphaltservicesinc.com/wp-content/uploads/2022/03/tenniscourts-middlesexasphaltservices.jpg" 
+    width="400"
+    class="center"/>
+    <br />
+    <br />    
+    Compete in weekly matches or practice with friends, theres something at clare tennis for everyone!
+    <br />
+    <br />
+    <img src="https://th.bing.com/th/id/R.7ea93bb57cf1683dceb752fd8be5033a?rik=202EkSj8erXPtw&pid=ImgRaw&r=0" 
+    width="300"
+    class="center"/>
+    
   </Fragment>
-  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
-    <a
-      href="https://docs.astro.build/"
-      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
-    >
-      <Icon pack="mdi" name="telescope" class="h-8" />
-      <span>Read the docs</span>
-    </a>
-    <a
-      href="https://astro.new/"
-      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
-    >
-      <Icon pack="mdi" name="rocket" class="h-8" />
-      <span>Try it out</span>
-    </a>
-  </div>
 </ContentSection>
+
+
+<style>
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5%;
+  }
+</style>

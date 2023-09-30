@@ -5,31 +5,31 @@ import type { FooterLink } from "~/types";
 
 const links: Array<FooterLink> = [
   {
-    url: "https://astro.build/",
-    description: "Astro's official website",
-    icon: "mdi:home",
+    url: "https://m.facebook.com/groups/985799011983001/?ref=share",
+    description: "Join the messenger chat",
+    icon: "https://img.icons8.com/ios/50/facebook-messenger--v1.png",
   },
   {
-    url: "https://github.com/mhyfritz/astro-landing-page",
-    description: "View source on GitHub",
-    icon: "fa-brands:github-alt",
+    url: "https://ucs.clare.cam.ac.uk/",
+    description: "Visit the clare college website",
+    icon: "https://th.bing.com/th/id/OIP.xw2VadNsDKwG6QnGw03lEQHaHa?w=80&h=80&c=7&r=0&o=5&pid=1.7",
   },
   {
-    url: "https://astro.build/chat",
-    description: "Astro on Discord",
-    icon: "fa-brands:discord",
-  },
-  {
-    url: "https://twitter.com/astrodotbuild",
-    description: "Astro on Twitter",
-    icon: "fa-brands:twitter",
+    url: "mailto:ahpd2@cam.ac.uk?subject=Tennis Soc 2023-24 Question",
+    description: "Send an email",
+    icon: "https://img.icons8.com/ios-glyphs/60/new-post.png",
   },
 ];
 ---
 
-<footer class="relative flex h-64 items-center justify-center">
-  <div class="absolute inset-0 overflow-hidden opacity-40">
-    <HeroImage />
+<footer class="relative flex h-32 items-center justify-center">
+  <div class="absolute inset-0 overflow-hidden">
+    <img 
+    src="src/assets/clare-logo.png"
+    loading="eager"
+    alt="Clare Logo"
+    class="center"
+    />
   </div>
   <ul class="relative grid grid-cols-2 gap-4 sm:grid-cols-4">
     {
@@ -40,10 +40,18 @@ const links: Array<FooterLink> = [
             href={link.url}
           >
             <span class="sr-only">{link.description}</span>
-            <Icon class="h-full" name={link.icon} />
+            <img src={link.icon}>
           </a>
         </li>
       ))
     }
   </ul>
 </footer>
+
+
+<style>
+    .center {
+  height:100%;
+  border-radius: 5%;
+  }
+</style>
