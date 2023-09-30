@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write **/*.astro .",
-    "clean": "rimraf dist .astro node_modules"
+    "clean": "rimraf dist .astro node_modules",
+    "install-dependencies": "npm install --legacy-peer-deps"
   },
   "devDependencies": {
     "@astrojs/image": "^0.17.3",
